@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>EJS</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel= "stylesheet" href= "/css/style.css">
+  </head>
+  <body>
+    <header style = "
+height:100px; 
+width: 100%; 
+font-size:2rem; 
+display:flex; 
+justify-content: center;
+align-items: center;
+background:black;
+color: white">Random Users</header>
+    <ul style = "
+    height: 1000px;
+    display: grid;
+    grid-template-columns:auto auto auto auto auto;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas;
+    background:black;
+    color: white">
+
+      <% data.data.results.forEach(person => { %>
+      <li><%= person.name.title%>, <%= person.name.first%> <%= person.name.last%> <img src="<%=person.picture.medium%>" alt= "..."/> </li>
+      <% }) %>
+      
+  
+    </ul>
+  </body>
+</html>
